@@ -10,8 +10,6 @@ object NaiveDecodingDemo extends IOApp {
 
     type Input = String
 
-    case class EventA(valueA: String)
-
     val consumerSettings =
       ConsumerSettings[IO, String, Input]
         .withAutoOffsetReset(AutoOffsetReset.Earliest)
