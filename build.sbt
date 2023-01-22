@@ -9,5 +9,5 @@ Compile / run / fork := true
 lazy val root = (project in file("."))
   .settings(
     name := "fs2kafka-demo",
-    libraryDependencies ++= List(Dependencies.fs2Kafka)
+    libraryDependencies ++= List(Dependencies.fs2Kafka, Dependencies.log4catsSlf4j, Dependencies.circeCore, Dependencies.circeParser, Dependencies.log4catsCore, Dependencies.logback)
   )
