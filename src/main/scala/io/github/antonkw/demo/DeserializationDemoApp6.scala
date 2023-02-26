@@ -1,13 +1,13 @@
 package io.github.antonkw.demo
 
-import cats.effect.{ ExitCode, IO, IOApp }
+import cats.effect.{ExitCode, IO, IOApp}
 import fs2.kafka._
 import io.circe._
 
 import java.util.UUID
 import scala.util.control.NoStackTrace
 
-object DeserializationDemoApp5 extends IOApp {
+object DeserializationDemoApp6 extends IOApp {
   override def run(args: List[String]): IO[ExitCode] = {
     def processRecord(
         record: ConsumerRecord[String, Either[Throwable, Input]]
