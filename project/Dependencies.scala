@@ -9,14 +9,20 @@ object Dependencies {
     val logback  = "1.4.5"
     val circe    = "0.14.3"
     val circeAdt = "0.0.7-SNAPSHOT"
+    val scalatest = "3.2.15"
   }
 
-  val fs2Kafka      = "com.github.fd4s"   %% "fs2-kafka"              % Versions.fs2Kafka
+  val fs2Kafka = "com.github.fd4s" %% "fs2-kafka" % Versions.fs2Kafka
   val log4catsSlf4j = typelevel("log4cats-slf4j", Versions.log4cats)
-  val log4catsCore  = typelevel("log4cats-core", Versions.log4cats)
-  val circeCore     = "io.circe"          %% "circe-core"             % Versions.circe
-  val circeParser   = "io.circe"          %% "circe-parser"           % Versions.circe
-  val circeAdt      = "io.github.antonkw" %% "circe-tagged-adt-codec" % Versions.circeAdt
+  val log4catsCore = typelevel("log4cats-core", Versions.log4cats)
+  val circeCore = "io.circe" %% "circe-core" % Versions.circe
+  val circeParser = "io.circe" %% "circe-parser" % Versions.circe
+  val circeAdt = "io.github.antonkw" %% "circe-tagged-adt-codec" % Versions.circeAdt
   // Runtime
   val logback = "ch.qos.logback" % "logback-classic" % Versions.logback
+
+  val scalatest = "org.scalatest" %% "scalatest" % Versions.scalatest % Test
+
+  val weaverScalacheck = "com.disneystreaming" %% "weaver-scalacheck" % "0.8.1" % Test
+  val weaverCats = "com.disneystreaming" %% "weaver-cats" % "0.8.1" % Test
 }

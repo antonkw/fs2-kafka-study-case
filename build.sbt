@@ -1,7 +1,7 @@
 ThisBuild / scalaVersion := "2.13.6"
 ThisBuild / version      := "0.1.0"
 
-ThisBuild / organization     := "io.github.antonkw"
+ThisBuild / organization := "io.github.antonkw"
 ThisBuild / organizationName := "antonkw"
 
 def sonatypeS01Repo(status: String) =
@@ -10,6 +10,8 @@ def sonatypeS01Repo(status: String) =
 ThisBuild / resolvers += sonatypeS01Repo("snapshots")
 
 Compile / run / fork := true
+
+testFrameworks += new TestFramework("weaver.framework.CatsEffect")
 
 lazy val root = (project in file("."))
   .settings(
@@ -21,6 +23,9 @@ lazy val root = (project in file("."))
       Dependencies.circeParser,
       Dependencies.circeAdt,
       Dependencies.log4catsCore,
-      Dependencies.logback
+      Dependencies.logback,
+      Dependencies.scalatest,
+      Dependencies.weaverCats,
+      Dependencies.weaverScalacheck
     )
   )
